@@ -8,6 +8,7 @@ import Card from '../components/Card.svelte';
 import Tag from '../components/Tag.svelte';
 import Links from '../components/Links.svelte';
 import { fromUrl } from '../code-store.js';
+import css from "../themes/index.css";
 // import pkg from '@mermaid-js/mermaid/package.json'
 import pkg from '@mermaid/package.json'
 
@@ -137,14 +138,13 @@ onMount(async () => {
 <style>
 	#editor-root {
 		display: flex;
+		flex-direction: column;
 		height: 100%;
 	}
 
 	#col1 {
-		width: 35%;
 	}
 	#col2 {
-		width: 65%;
 		padding-left: 32px;
 	}
 	#app-title {
@@ -190,44 +190,14 @@ onMount(async () => {
 			</div>
 				<Editor data={params.data}/>
 			</Card>
-			<Card title="Mermaid Configuration" ><Config /></Card>
-			<Card title='Links'>
-				<ul className='marketing-links'>
-					<li>
-						<a href='https://mermaid-js.github.io/mermaid' target='_blank'>
-							Mermaid Documentation
-						</a>
-					</li>
-					<li>
-						<a href='https://github.com/mermaid-js/mermaid' target='_blank'>
-							Mermaid on GitHub
-						</a>
-					</li>
-					<li>
-						<a
-							href='https://github.com/mermaid-js/mermaid-live-editor'
-							target='_blank'
-						>
-							Live Editor on GitHub
-						</a>
-					</li>
-					<li>
-						<a
-							href='https://github.com/mermaid-js/mermaid.cli'
-							target='_blank'
-						>
-							Mermaid CLI
-						</a>
-					</li>
-				</ul>
-			</Card>
 		</div>
 		<div id="col2">
 			<Card title="Preview"><View /></Card>
-			<Card title="Actions"><Links /></Card>
 			<div id="power">
 				Powered by mermaid <Tag color='green'>{mermaidVersion}</Tag>
 			</div>
+			<Card title="Mermaid Configuration" ><Config /></Card>
+			<Card title="Actions"><Links /></Card>
 		</div>
 	</div>
 </div>
