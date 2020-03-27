@@ -39,7 +39,8 @@ text.actor {
     fill:black;
     stroke:none;
     font-family: 'trebuchet ms', verdana, arial;
-    font-size: 14px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
 .labelBox {
@@ -57,6 +58,8 @@ text.actor {
     fill:black;
     stroke:none;
     font-family: 'trebuchet ms', verdana, arial;
+    font-size: 11px !important;
+    font-style: italic;
 }
 
 .loopLine {
