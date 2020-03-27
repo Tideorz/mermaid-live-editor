@@ -13,7 +13,19 @@ import 'monaco-editor/esm/vs/editor/contrib/find/findController.js';
 import * as monaco from 'monaco-editor/esm/vs/editor/editor.api.js';
 
 export let code = '';
-export let conf = { theme: 'default' };
+export let conf = {
+	theme: 'default',
+	sequence: {
+	    diagramMarginX:50,
+	    diagramMarginY:10,
+	    boxTextMargin:5,
+	    noteMargin:10,
+	    messageMargin:35,
+	    mirrorActors:0,
+	    actorMargin:150,
+	    width: 200,
+	}
+};
 let edit;
 export let error = false;
 
